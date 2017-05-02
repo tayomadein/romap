@@ -1,0 +1,32 @@
+<div>
+<md-toolbar color="primary" class="md-shadow-bottom-z-1 deep-orange darken-1">
+  <div class="lg">
+    <a href="#" class="brand-logo left"><img id="clogo" [src]="logoURL"></a>
+  </div>
+  <span class="spacer"></span>
+  <div class="sw">
+    <form>
+      <input class="search" #searchText name="searchInput" type="text" [(ngModel)]='address' (keyup.enter)="searchAddress(); searchText.value=''"
+      />
+      <md-icon class="logo">search</md-icon>
+    </form>
+  </div>
+  <span class="spacer"></span>
+  <div class="menu">
+    <button md-icon-button color="primary" class="btn deep-orange" routerLink="/report">
+      <md-icon class="logo">insert_chart</md-icon>
+    </button>
+    <!--md-menu class="deep-orange darken-1" #menuList="mdMenu">
+      <span>Reports</span>
+      <button class="btnDrop" md-menu-item routerLink="/map" routerLinkActive="active">
+        <md-icon class="logo">home</md-icon>
+        <span>Home</span>
+      </button>
+      <button class="btnDrop" md-menu-item routerLink="/report">
+        <md-icon class="logo">insert_chart</md-icon>
+        <span>Reports</span>
+      </button>
+    </md-menu-->
+  </div>
+</md-toolbar>
+</div>

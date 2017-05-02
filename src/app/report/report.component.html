@@ -1,0 +1,80 @@
+
+  <md-sidenav-container class="example-sidenav-fab-container">
+    <md-sidenav #sidenav mode="side" opened="true">
+        <div class="marg">
+            <h4>Top Drivers</h4>
+            <div>
+                <ul class="collection">
+                    <li class="collection-item avatar" *ngFor="let d of topDrivers" (click)="onSelect(d)">
+                        <img src="./images/driver.png" alt="" class="circle">
+                        <span class="title truncate">{{d.name}}</span>
+                        <p>Distance: {{d.distance}} <br> Total Orders: {{d.total_orders}}
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </md-sidenav>
+    <div class="moremarg" style="display: block">
+        <div>
+            <h4>Weekly Average
+                <span *ngIf="selectedDriver"> vs. {{selectedDriver.name}}</span>
+            </h4>
+        </div>
+        <div class="avgChart" [style.display]="display">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [colors]="barChartColors" [options]="barChartOptions"
+                [legend]="barChartLegend" [chartType]="barChartType">
+            </canvas>
+        </div>
+        <div class="indChart" *ngIf="selectedDriver">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [colors]="barChartColors" [options]="barChartOptions"
+                [legend]="barChartLegend" [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+</md-sidenav-container>
+  <!--div class="row">
+    <div class="col s12 m4 l3">
+      <div class="marg">
+        <h4>Top Drivers</h4>
+        <div>
+          <ul class="collection">
+            <li class="collection-item avatar" *ngFor="let d of topDrivers" (click)="onSelect(d)">
+              <img src="./images/driver.png" alt="" class="circle">
+              <span class="title truncate">{{d.name}}</span>
+              <p>Distance: {{d.distance}} <br> Total Orders: {{d.total_orders}}
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m8 l9">
+      <div class="moremarg" style="display: block">
+      <div>
+        <h4>Weekly Average
+          <span *ngIf="selectedDriver"> vs. {{selectedDriver.name}}</span>
+        </h4>
+      </div>
+      <div class="avgChart" [style.display]="display">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [colors]="barChartColors" [options]="barChartOptions"
+          [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+      </div>
+      <div class="indChart" *ngIf="selectedDriver">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [colors]="barChartColors" [options]="barChartOptions"
+          [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+<!div 
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)" class="marg" *ngIf="selectedDriver">
+      <h4>{{selectedDriver.name}}</h4>
+    </div>
+    </div>
+  </div>
+<!div class="container"></div-->

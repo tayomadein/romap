@@ -1,0 +1,25 @@
+.marg{
+    margin-left: 15px;
+}
+
+.moremarg{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.avi {
+width: 35%;
+}
+
+.trunc {
+    white-space: nowrap; 
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Container bounds all elements */
+
+.container .row{
+  height: 100%;
+  width: 100%;
+}

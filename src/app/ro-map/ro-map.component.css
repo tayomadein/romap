@@ -1,0 +1,170 @@
+/********************************* Nav Menu  **********************************/
+/* Container bounds all elements */
+
+.container .romap{
+  height: 100%;
+  width: 100%;
+}
+
+/* Space between nav menu elements */
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Styles logo */
+
+.lg{
+  height: 45px;
+  max-height: 45px;
+}
+
+.lg a{
+  height: 43px;
+}
+
+.lg a img{
+    height: inherit;
+    padding: 6px;
+}
+
+/* Styles Search bar elements */
+
+.sw {
+  float: right;
+  width: 70%;
+  height: 40px;
+  background: #ff7b47;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.sw form {
+  float: right;
+  width: 100%;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sw a.logo {
+  color:white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  width: auto;
+  height: 100%;
+  max-width: 80px;
+  margin-right: 10px;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sw a.logo img {
+  max-width: 100%;
+  width: auto;
+}
+
+.sw input.search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background: #ff7b47;
+  height: 30px;
+   -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.sw .search:focus {
+  height: 30px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+input[type=text]:-webkit-autofill,
+input[type=text]:-webkit-autofill:hover, 
+input[type=text]:-webkit-autofill:focus
+input[type=text]:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0px;
+  box-shadow: 0 0 0px 1000px #000 inset;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/********************************* MENU  **********************************/
+/* Menu Logo Class */
+
+md-icon.logo {
+  color:white;
+}
+
+.md-menu-content {
+  background: #ff7b47;  
+}
+
+.btnDrop {
+  color: white;
+}
+
+/*
+    Class to be added for a tooltip that is a menudrop down
+    So it must be a .bottom tooltip to begin with
+
+.bottom .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Use half of the width (120/2 = 60), to center the tooltip  }
+
+/*.menuDown .tooltiptext::after {
+  left: 85%;
+  border-color: transparent transparent #353535 transparent; }
+
+.menuDown .tooltiptext {
+  width: 120px;
+  top: 150%;
+  left: 90%;
+  margin-left: -122px;
+   Use half of the width (120/2 = 60), to center the tooltip 
+  padding: 7px;
+  background-color: #353535;
+  border-radius: 0px;
+  text-align: left;
+  color: #BFBBBC;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+.menuDown:hover .tooltiptext {
+  visibility: hidden;
+  opacity: 0; }*/
